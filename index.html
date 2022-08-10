@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>"Basketball Score"</title>
+        <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">  
+        <link rel="stylesheet" href="index.css" />
+        <link rel="icon" type='image/x-icon' href="images/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />   
+      </head>
+    <body>
+<!--        <h2 class="progressbar-el" document.getElementById.("progressBar").innerText></h2> -->
+        <div id="timer"></div>
+        <div class="container">
+            <div>
+                <h3>HOME</h3>
+                <div class="scoreBox Home">0</div>
+                <div class="container">
+                    <button onclick="addOneHome()" class="scoreButton">+1</button>
+                    <button onclick="addTwoHome()" class="scoreButton">+2</button>
+                    <button onclick="addThreeHome()" class="scoreButton">+3</button>
+                </div>
+            </div>    
+            <div>
+                <h3>GUEST</h3>
+                <div class="scoreBox Guest">0</div>
+                <div class="container">
+                    <button onclick="addOneGuest()" class="scoreButton">+1</button>
+                    <button onclick="addTwoGuest()" class="scoreButton">+2</button>
+                    <button onclick="addThreeGuest()" class="scoreButton">+3</button>
+                </div>
+            </div>
+        </div>
+        <button onclick="resetGame()" class="newGame">New Game</button>
+        <script src="index.js"></script>
+    </body>
+</html>

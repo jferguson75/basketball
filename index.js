@@ -4,7 +4,22 @@ const boxGuest = document.querySelector('.Guest')
 // Results for both
 let homeScore  = 0
 let guestScore = 0
-//   let progressBar = document.getElementById("progressbar-el")
+
+//Currently only counts down from 60 seconds  
+function MyTimer(callback, val) {
+    val = val || 60; 
+    var timer=setInterval(function() { 
+        callback(val);
+        if(val-- <= 0) { 
+            clearInterval(timer); 
+        } 
+    }, 1000);
+}
+//unsure how to make this work as a minute and second timer.
+new MyTimer(function(val) {
+    var timerMsg = "00:" + (val >= 10 ? val : "0" + val);
+    document.getElementById("timer").textContent = timerMsg; 
+});
 
 // Home
 function addOneHome() {
@@ -44,18 +59,3 @@ function resetGame() {
     guestScore = 0
     boxGuest.textContent = guestScore;
 }
-//Currently only counts down from 60 seconds  
-function MyTimer(callback, val) {
-    val = val || 60; 
-    var timer=setInterval(function() { 
-        callback(val);
-        if(val-- <= 0) { 
-            clearInterval(timer); 
-        } 
-    }, 1000);
-}
-//unsure how to make this work as a minute and second timer.
-new MyTimer(function(val) {
-    var timerMsg = "00:" + (val >= 10 ? val : "0" + val);
-    document.getElementById("timer").textContent = timerMsg; 
-});

@@ -8,7 +8,7 @@ body {
     height: 385px;
     background: #1B244A;
 }
-#timer{
+#timer {
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: space-around;
     color: #EEEEEE;
-    
+    margin: auto;
 }
 
 h3 {
